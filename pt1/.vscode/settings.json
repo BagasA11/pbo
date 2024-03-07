@@ -1,0 +1,19 @@
+{
+    "java.completion.importOrder": [
+        "#",
+        "java",
+        "javax",
+        "org",
+        "com",
+        ""
+    ],
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "D:/Java/jdk-17",
+            "sources" : "D:/Java/jdk-17/lib/src.zip",
+            "javadoc" : "https://docs.oracle.com/en/java/javase/17/docs/api/",
+            "default":  true
+        },
+    ]
+}
