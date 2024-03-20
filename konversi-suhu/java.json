@@ -1,0 +1,18 @@
+{
+	"private class":{
+		"prefix": "class",
+		"body": "class $1{}"
+	},
+	"private":{
+		"prefix": "priv",
+		"body": "private ${1|int,float,String,double|} $2;"
+	},
+	"public method":{
+		"prefix": "pubm",
+		"body": "public ${1|int,float,String,double|} $2($3){$4}"
+	},
+	"public static void main":{
+		"prefix": "main",
+		"body": "public static void main(String[] args){}"
+	}
+}
