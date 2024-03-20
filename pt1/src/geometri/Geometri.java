@@ -1,7 +1,6 @@
 package geometri;
 import format.*;
 
-
 public class Geometri {
     public Kotak Kotak;
     
