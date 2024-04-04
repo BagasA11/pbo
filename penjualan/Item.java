@@ -35,7 +35,6 @@ public class Item {
     }
 
     public static Item bonus(Item itm){
-        
         // total pembelian > 500.000 && qty > 5
         if (itm.getSub() > 500000f && itm.qty > 5){
             Item bonus = new Item("setrika", 1, 0);

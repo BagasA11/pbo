@@ -51,22 +51,28 @@ public class Penjualan{
 
         System.out.println("total: " + Item.total_harga(items));
         System.out.println("uang: "+uang);
-        System.out.println("kembalian: "+ (Item.total_harga(items) - uang));
+        System.out.println("kembalian: "+ (uang - Item.total_harga(items)));
     }
 
     public static void tambah_data(){
-        String ulang;
+        String ulang = "Y";
         int i = 1;
+        System.out.println("input data penjualan:");
+        System.out.println("-------------------");
         do {
-            System.out.println("input data penjualan:");
-            System.out.println();
+            System.out.println("data ke-"+i);
+            
             items = new Item[i];
             items[i-1] = Item.input();
-
+            if(i > 1){
+                System.out.printf("<pre> null?:\t %b \n", items[i-2] == null);
+            }
+            System.out.printf("<post> null?:\t %b \n", items[i-1] == null);
             System.out.println("ulangi [Y/N]");
             ulang = stscan.nextLine();
-
-        } while(ulang == "y" || ulang == "Y");
+            
+            i+=1;
+        } while(ulang.equalsIgnoreCase("Y"));
 
     }
    
