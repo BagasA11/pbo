@@ -62,12 +62,18 @@ public class Penjualan{
         do {
             System.out.println("data ke-"+i);
             
+            Item it = new Item();
+            it = Item.input();
+            
             items = new Item[i];
-            items[i-1] = Item.input();
+            items[i-1] = it;
+
+            System.out.println("array length: \t" + items.length);
             if(i > 1){
                 System.out.printf("<pre> null?:\t %b \n", items[i-2] == null);
             }
             System.out.printf("<post> null?:\t %b \n", items[i-1] == null);
+
             System.out.println("ulangi [Y/N]");
             ulang = stscan.nextLine();
             

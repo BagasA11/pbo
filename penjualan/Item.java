@@ -8,6 +8,8 @@ public class Item {
     float harga;
     int qty;    
 
+    public Item(){}
+    
     public float getSub(){
         return (float) qty * harga;
     }
