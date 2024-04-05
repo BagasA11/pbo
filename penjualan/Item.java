@@ -59,7 +59,10 @@ public class Item {
         float total = 0;
 
         for(Item items: itm){
-            total += items.getSub();
+            // null validation
+            if (items != null){
+                total += items.getSub();
+            }
         }
 
         return total;

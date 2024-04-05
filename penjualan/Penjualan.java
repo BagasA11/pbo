@@ -20,7 +20,7 @@ public class Penjualan{
 
     public static void cetak_nota(float uang){
         Item bonus = new Item();
-
+        
         System.out.printf("nama: %s \t\t tanggal: %s \n", nama_kasir, tgl.toString());
 
         System.out.println("========================================");
@@ -28,6 +28,10 @@ public class Penjualan{
         System.out.println("========================================");
 
         for(Item itm: items){
+            
+            if (itm == null) {
+                continue;
+            }
             System.out.printf("%s \t %s \t %d \t %2f \t %2f \n", itm.kode, itm.nama_barang, itm.qty, itm.harga, itm.getSub());
             if (Item.bonus(itm) != null){
                 bonus = Item.bonus(itm);

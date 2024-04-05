@@ -1,0 +1,62 @@
+D:\Java\belajar-java\pbo\penjualan>java Main
+masukkan nama anda
+Bagas
+|        input data penjualan   |
+
+masukkan jumlah barang yang akan diinput
+4
+-------------------
+data ke-1
+input nama barang:
+Buku
+input harga barang:
+3000
+input kuantitas barang:
+10
+ulangi [Y/N]
+Y
+data ke-2
+input nama barang:
+pensil
+input harga barang:
+1000
+input kuantitas barang:
+10
+ulangi [Y/N]
+Y
+data ke-3
+input nama barang:
+pulpen
+input harga barang:
+2000
+input kuantitas barang:
+2
+ulangi [Y/N]
+Y
+data ke-4
+input nama barang:
+sabun
+input harga barang:
+4500
+input kuantitas barang:
+20
+ulangi [Y/N]
+N
+
+input uang pembayaran
+90000
+
+nama: Bagas              tanggal: 2024-04-05
+========================================
+kode     nama barang     qty     harga   sub-total
+========================================
+93a21cc1-bfd6-47bf-8489-60ceaf7ef642     Buku    10      3000,000000     30000,000000
+0e8a591e-f4f0-421f-b6a1-9a899e030da6     pensil          10      1000,000000     10000,000000
+1ca9d07f-4c33-47a1-969f-88d5f6f4af21     pulpen          2       2000,000000     4000,000000
+ee16ae54-4520-49de-8784-df64b1fcb34c     sabun   20      4500,000000     90000,000000
+bonus:
+d210150e-d040-4a0c-9780-57dabac8709b     pulpen          1       0,000000        0,000000
+
+total: 134000.0
+uang: 90000.0
+kembalian: -44000.0
