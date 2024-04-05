@@ -14,13 +14,13 @@ public class Penjualan{
 
     public static void registrasi(){
         System.out.println("masukkan nama anda");
-        nama_kasir = stscan.nextLine();
+        nama_kasir = stscan.next();
         tgl = LocalDate.now();
     }
 
     public static void cetak_nota(float uang){
-        int j = 0;
-        Item []bonusses = new Item[1];
+        Item bonus = new Item();
+
         System.out.printf("nama: %s \t\t tanggal: %s \n", nama_kasir, tgl.toString());
 
         System.out.println("========================================");
@@ -29,24 +29,14 @@ public class Penjualan{
 
         for(Item itm: items){
             System.out.printf("%s \t %s \t %d \t %2f \t %2f \n", itm.kode, itm.nama_barang, itm.qty, itm.harga, itm.getSub());
-            
-            Item bonus = Item.bonus(itm);
-            if (bonus != null){
-
-                bonusses = new Item[j+1];
-                bonusses[j] = bonus;
-
-                j++;
+            if (Item.bonus(itm) != null){
+                bonus = Item.bonus(itm);
             }
         }
         
         System.out.println("bonus:");
-
-        if (bonusses != null){
-            for(Item bns: bonusses){
-                System.out.printf("%s \t %s \t %d \t %2f \t %2f \n", bns.kode, bns.nama_barang, bns.qty, bns.harga, bns.getSub());
-            }
-        }
+        System.out.printf("%s \t %s \t %d \t %2f \t %2f \n", bonus.kode, bonus.nama_barang, bonus.qty, bonus.harga, bonus.getSub());
+        
         System.out.println("");
 
         System.out.println("total: " + Item.total_harga(items));
@@ -55,27 +45,30 @@ public class Penjualan{
     }
 
     public static void tambah_data(){
-        String ulang = "Y";
+        String ulang = "y";
         int i = 1;
-        System.out.println("input data penjualan:");
+        System.out.println("|\t input data penjualan \t|");
+        System.out.println();
+        System.out.println("masukkan jumlah barang yang akan diinput");
+        int len = stscan.nextInt();
+        items = new Item[len];
         System.out.println("-------------------");
+
         do {
+            // ensure i cannot overflow len value
+            if (i > len){
+                System.out.println("batas elemen tercapai. input selesai");
+                break;
+            }
             System.out.println("data ke-"+i);
             
             Item it = new Item();
             it = Item.input();
-            
-            items = new Item[i];
             items[i-1] = it;
-
-            System.out.println("array length: \t" + items.length);
-            if(i > 1){
-                System.out.printf("<pre> null?:\t %b \n", items[i-2] == null);
-            }
-            System.out.printf("<post> null?:\t %b \n", items[i-1] == null);
-
+            
+            
             System.out.println("ulangi [Y/N]");
-            ulang = stscan.nextLine();
+            ulang = stscan.next(); // this line skipped
             
             i+=1;
         } while(ulang.equalsIgnoreCase("Y"));

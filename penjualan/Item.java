@@ -9,7 +9,7 @@ public class Item {
     int qty;    
 
     public Item(){}
-    
+
     public float getSub(){
         return (float) qty * harga;
     }
@@ -24,7 +24,7 @@ public class Item {
 
     public static Item input(){
         System.out.println("input nama barang: ");
-        String nama = statsc.nextLine();
+        String nama = statsc.next();
 
         System.out.println("input harga barang: ");
         float hargax = statsc.nextFloat();
