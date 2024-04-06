@@ -1,0 +1,59 @@
+D:\Java\belajar-java\pbo\penjualan>javac Main.java
+
+D:\Java\belajar-java\pbo\penjualan>java Main
+masukkan nama anda
+bagas rs
+--------------------------------------
+|        input data penjualan   |
+--------------------------------------
+
+masukkan jumlah barang yang akan diinput
+3
+-------------------
+data ke-1
+input nama barang: ... [satu kata saja]
+popmie
+input harga barang:
+5000
+input kuantitas barang:
+4
+ulangi [Y/N]
+Y
+data ke-2
+input nama barang: ... [satu kata saja]
+mie_sedap
+input harga barang:
+3000
+input kuantitas barang:
+25
+ulangi [Y/N]
+Y
+data ke-3
+input nama barang: ... [satu kata saja]
+Indomie
+input harga barang:
+3000
+input kuantitas barang:
+30
+ulangi [Y/N]
+Y
+batas elemen tercapai. input selesai
+
+input uang pembayaran
+200000
+
+nama: bagas rs           tanggal: 2024-04-06
+========================================
+kode     nama barang     qty     harga   sub-total
+========================================
+7a6a7f69-2d17-411c-a93b-19e7ccf82586     popmie          4       5000,000000     20000,000000
+55711893-e752-40dd-97f3-84bf12186528     mie_sedap       25      3000,000000     75000,000000
+41b8a8d8-f5aa-4292-b9bf-3a6fb8a33502     Indomie         30      3000,000000     90000,000000
+bonus:
+7f9ab03c-8e9a-4849-b400-b8a185b0af1b     pulpen          1       0,000000        0,000000
+
+total: 185000.0
+uang: 200000.0
+kembalian: 15000.0
+
+D:\Java\belajar-java\pbo\penjualan>

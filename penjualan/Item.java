@@ -23,18 +23,20 @@ public class Item {
     }
 
     public static Item input(){
-        System.out.println("input nama barang: ");
+        System.out.println("input nama barang: ... [satu kata saja]");
         String nama = statsc.next();
-
+        
         System.out.println("input harga barang: ");
         float hargax = statsc.nextFloat();
-
+        
         System.out.println("input kuantitas barang: ");
         int amount = statsc.nextInt();
-
+        
         Item i = new Item(nama, amount, hargax);
         return i;
     }
+        
+
 
     public static Item bonus(Item itm){
         // total pembelian > 500.000 && qty > 5

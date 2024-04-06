@@ -14,7 +14,7 @@ public class Penjualan{
 
     public static void registrasi(){
         System.out.println("masukkan nama anda");
-        nama_kasir = stscan.next();
+        nama_kasir = stscan.nextLine();
         tgl = LocalDate.now();
     }
 
@@ -51,7 +51,9 @@ public class Penjualan{
     public static void tambah_data(){
         String ulang = "y";
         int i = 1;
+        System.out.println("--------------------------------------");
         System.out.println("|\t input data penjualan \t|");
+        System.out.println("--------------------------------------");
         System.out.println();
         System.out.println("masukkan jumlah barang yang akan diinput");
         int len = stscan.nextInt();
@@ -70,10 +72,8 @@ public class Penjualan{
             it = Item.input();
             items[i-1] = it;
             
-            
             System.out.println("ulangi [Y/N]");
             ulang = stscan.next(); // this line skipped
-            
             i+=1;
         } while(ulang.equalsIgnoreCase("Y"));
 
